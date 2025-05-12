@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package auth;
+
+option go_package = "github.com/katherinevse/proto_files/gen/go/auth;auth";  // Путь к Go-пакету
+
+
+
+service AuthService {
+  rpc SendNumber(SendNumberRequest) returns (SendNumberResponse);
+  rpc VerifyCode(VerifyCodeRequest) returns (VerifyCodeResponse);
+}
+
+message SendNumberRequest {
+  string phone_number = 1;
+}
+
+message SendNumberResponse {}
+
+message VerifyCodeRequest {
+  string phone_number = 1;
+  string code = 2;
+}
+
+message VerifyCodeResponse {
+  bool success = 1;
+}
