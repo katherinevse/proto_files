@@ -1,4 +1,4 @@
-module auth
+module github.com/katherinevse/proto_files
 
 go 1.23
 
