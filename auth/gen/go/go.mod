@@ -1,6 +1,6 @@
 module auth
 
-go 1.23.6
+go 1.23
 
 require (
 	google.golang.org/grpc v1.72.1
